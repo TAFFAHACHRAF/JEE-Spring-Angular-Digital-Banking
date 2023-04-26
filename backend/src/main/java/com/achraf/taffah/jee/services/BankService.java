@@ -5,9 +5,9 @@ import com.achraf.taffah.jee.repositories.BankAccountRepository;
 
 import java.util.List;
 
-public class BankService {
-    public List<BankAccount> bankServices(){
+public interface BankService {
+    /*public List<BankAccount> bankServices(){
         BankAccountRepository bankAccountRepository = null;
         return bankAccountRepository.findAll();
-    }
+    }*/
 }
