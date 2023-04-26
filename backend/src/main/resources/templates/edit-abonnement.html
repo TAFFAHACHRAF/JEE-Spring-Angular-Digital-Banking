@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit an existing ressource</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Fredoka One', cursive;
+        }
+    </style>
+</head>
+<body>
+<div layout:fragment="content" class="my-4">
+    <div class="container h-100 py-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3 class="h3 mt-3 mb-4 mx-auto display-6 fw-light ">
+                    Edit an existing abonnement
+                </h3>
+            </div>
+            <form th:action="@{put(page=${page},keyword=${keyword},size=${size})}" method="post">
+                <input type="hidden" name="id" th:value="${abonnement.getId()}">
+                <div class="card-body py-4">
+                    <div class="col-8 col-md-6 mx-auto">
+                        <div class="mb-3">
+                            <label for="abonnement" class="form-label fw-bold">Id : </label>
+                            <input type="text" readonly class="form-control text-center" id="abonnement" th:value="${abonnement.getId()}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="dateAbonnement" class="form-label fw-bold">Date abonnment : </label>
+                            <input type="date" name="dateAbonnement" class="form-control" id="dateAbonnement"
+                                   th:value="${abonnement.getDateAbonnement()}">
+                            <small class="text-danger" th:errors="${abonnement.dateAbonnent}"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="typeAbonnement" class="form-label fw-bold">Type abonnement : </label>
+                            <input type="date" name="typeAbonnement" class="form-control" id="typeAbonnement"
+                                   th:value="${abonnement.getTypeAbonnement()}">
+                            <small class="text-danger" th:errors="${abonnement.typeAbonnement}"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="solde" class="form-label fw-bold">Solde : </label>
+                            <input type="text" name="solde" class="form-control" id="solde"
+                                   th:value="${abonnement.getSolde()}">
+                            <small class="text-danger" th:errors="${abonnement.solde}"></small>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer text-center">
+                    <button type="submit" class="btn btn-warning my-2 py-2 px-4">Save</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a new ressource</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Fredoka One', cursive;
+        }
+    </style>
+</head>
+<body>
+<div layout:fragment="content" class="my-4">
+    <div class="container h-100 py-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3 class="h3 mt-3 mb-4 mx-auto display-6 fw-light ">
+                    Add a new client
+                </h3>
+            </div>
+            <form th:action="@{/client/save}" method="post">
+
+                <div class="card-body py-4">
+
+                    <div class="col-8 col-md-6 mx-auto">
+                        <div class="mb-3">
+                            <label for="nom" class="form-label fw-bold">Nom : </label>
+                            <input type="text" name="nom" class="form-control" id="nom"
+                                   th:value="${client.getNom()}">
+                            <small class="text-danger" th:errors="${client.nom}"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email : </label>
+                            <input type="email" name="email" class="form-control" id="email"
+                                   th:value="${client.getEmail()}">
+                            <small class="text-danger" th:errors="${client.email}"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="username" class="form-label fw-bold">Username : </label>
+                            <input type="text" name="username" class="form-control" id="username"
+                                   th:value="${client.getUsername()}">
+                            <small class="text-danger" th:errors="${client.username}"></small>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer text-center">
+                    <button type="submit" class="btn btn-success my-2 py-2 px-4">Add Client</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

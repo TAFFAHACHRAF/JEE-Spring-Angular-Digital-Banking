@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="template">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Fredoka One', cursive;
+        }
+    </style>
+</head>
+<body>
+<div layout:fragment="content" class="my-4">
+    <div class="container h-100 py-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3 class="h3 mt-3 mb-4 mx-auto display-6 fw-light ">Home</h3>
+            </div>
+            <div class="card-body py-4">
+                <h4 sec:authorize="!isAuthenticated()" style="text-align:center;">Please log in to continue !</h4>
+                <h4 sec:authorize="isAuthenticated()" style="text-align:center;">Please choose a menu to start !</h4>
+            </div>
+            <div class="card-footer">
+                <h6 style="text-align:center;">All rights are reserved 2022</h6>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
