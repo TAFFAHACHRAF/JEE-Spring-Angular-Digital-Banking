@@ -9,6 +9,7 @@ import { CustomerService } from '../services/customer.service';
 })
 export class CustomersComponent implements OnInit{
   customers : any;
+  errorMessage! : String
   constructor(private customerService : CustomerService){}
 
   ngOnInit(): void {
@@ -17,7 +18,7 @@ export class CustomersComponent implements OnInit{
         this.customers=data
       },
       error : (error)=>{
-        console.log(error)
+        this.errorMessage=error.message
       }
     })
   }

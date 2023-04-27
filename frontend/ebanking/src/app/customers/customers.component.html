@@ -1,4 +1,5 @@
 <div class="container mt-2">
+    <div *ngIf="errorMessage" class="text-danger bg-white">{{errorMessage}}</div>
     <div class="card" *ngIf="customers">
         <div class="card-header"> Customers </div>
         <div class="card-body">

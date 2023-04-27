@@ -10,6 +10,6 @@ export class CustomerService {
   constructor(private http:HttpClient) { }
 
   public getCustomers():Observable<any>{
-    return this.http.get("http://localhost:8085/customers")
+    return this.http.get("http://localhost:805/customers")
   }
 }
