@@ -1,1 +1,22 @@
-<p>accounts works!</p>
+<div class="container mt-2" *ngIf="accounts">
+    <div class="card">
+        <div class="card-header">Accounts</div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th> <th>Name</th> <th>Email</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let c of accounts">
+                        <td>{{c.customerDTO.id}}</td>
+                        <td>{{c.customerDTO.name}}</td>
+                        <td>{{c.customerDTO.email}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
