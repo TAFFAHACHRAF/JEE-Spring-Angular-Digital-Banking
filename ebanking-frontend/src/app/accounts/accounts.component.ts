@@ -12,10 +12,12 @@ export class AccountsComponent implements OnInit{
   constructor(private http:HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get("http://localhost:8085/accounts").subscribe(data=>{
-      this.accounts=data;
-    }, error => {
-      console.log(error)
-    })
-  }
-}
+    this.http.get("http://localhost:8085/accounts").subscribe({
+      next : (data) => {
+        this.accounts = data
+      },
+      error : (err) => {
+        console.log(err)
+      }
+  });
+}}
