@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import { CustomerService } from '../services/customer.service';
 import {catchError, map, Observable, throwError} from "rxjs";
 import {Customer} from "../model/customer.model";
