@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="form_container m-4">
+    <div class="form_header">
+      <h3>Login</h3>
+    </div>
+    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" class="needs-validation">
+      <div class="form-group">
+        <label for="username"><i class="bi bi-person"></i> Username</label>
+        <input type="email" name="username" id="username" [(ngModel)]="form.username" #username="ngModel"
+          class="form-control" required>
+        <div class="invalid-feedback" *ngIf="username.invalid && f.submitted">
+          Username is required
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="password"><i class="bi bi-lock"></i> Password</label>
+        <input type="password" name="password" id="password" [(ngModel)]="form.password" #password="ngModel"
+          class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <button class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Login</button>
+      </div>
+    </form>
+    </div>
+  </div>
+  

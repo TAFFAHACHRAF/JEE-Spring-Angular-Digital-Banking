@@ -1,0 +1,35 @@
+<div class="form_container" *ngIf="product">
+    <form 
+    name="form"
+    #f="ngForm"
+    (ngSubmit)="f.form.valid && onSubmit()"
+    >
+        <div class="group">
+            <label for="username">Name</label>
+            <input type="text" name="name" id="name" [(ngModel)]="form.name" #name="ngModel" required>
+            <div class="name_error" *ngIf="name.invalid && f.submitted">
+                Name is required    
+            </div>
+        </div>
+
+        <div class="group">
+            <label for="quantity">Quantity</label>
+            <input type="text" name="quantity" id="quantity" [(ngModel)]="form.quantity" #quantity="ngModel" required>
+            <div class="quantity_error" *ngIf="quantity.invalid && f.submitted">
+                Quantity is required    
+            </div>
+        </div>
+
+        <div class="group">
+            <label for="price">price</label>
+            <input type="text" name="price" id="category" [(ngModel)]="form.price" #price="ngModel" required>
+            <div class="price" *ngIf="price.invalid && f.submitted">
+                Price is required    
+            </div>
+        </div>
+
+        <div class="group">
+            <button>Save product</button>
+        </div>
+    </form>
+</div>
