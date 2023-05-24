@@ -6,7 +6,6 @@ import { AlayoutComponent } from './alayout/alayout.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { AheaderComponent } from './aheader/aheader.component';
-import { AccountComponent } from './account/account.component';
 
 
 @NgModule({
@@ -14,8 +13,7 @@ import { AccountComponent } from './account/account.component';
     AlayoutComponent,
     DashbordComponent,
     SidemenuComponent,
-    AheaderComponent,
-    AccountComponent
+    AheaderComponent
   ],
   imports: [
     CommonModule,
