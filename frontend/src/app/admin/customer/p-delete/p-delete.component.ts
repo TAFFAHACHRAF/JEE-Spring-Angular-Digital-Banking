@@ -18,7 +18,7 @@ export class PDeleteComponent implements OnInit{
       this.route.params.subscribe(params => {
         this.id = params['id'];
         this.deleteProduct(this.id)
-        this.router.navigate(['admin/product'])
+        this.router.navigate(['admin/customer'])
       });
     }
 
