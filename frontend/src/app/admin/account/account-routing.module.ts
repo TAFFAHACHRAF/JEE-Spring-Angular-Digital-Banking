@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AIndexComponent } from './a-index/a-index.component';
+
 // import { PDeleteComponent } from './p-delete/p-delete.component';
 // import { PEditComponent } from './p-edit/p-edit.component';
 // import { PAddComponent } from './p-add/p-add.component';
@@ -16,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CustomerRoutingModule { }
+export class AccountRoutingModule { }
