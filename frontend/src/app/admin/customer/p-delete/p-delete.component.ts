@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductService } from 'src/app/_services/product.service';
+import { CustomerService } from 'src/app/_services/customer.service';
 
 @Component({
   selector: 'app-p-delete',
@@ -12,7 +12,7 @@ export class PDeleteComponent implements OnInit{
   
     constructor(private route: ActivatedRoute,
       private router:Router,
-      private productService: ProductService) {}
+      private customerService: CustomerService) {}
   
     ngOnInit() {
       this.route.params.subscribe(params => {
@@ -23,8 +23,7 @@ export class PDeleteComponent implements OnInit{
     }
 
     deleteProduct(id:number){
-      this.productService.deleteProduct(id).subscribe({
+      this.customerService.deleteCustomer(id).subscribe({
       })
     }
-
 }

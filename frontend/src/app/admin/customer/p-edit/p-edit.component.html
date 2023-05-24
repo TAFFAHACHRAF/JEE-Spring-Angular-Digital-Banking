@@ -1,4 +1,4 @@
-<div class="form_container" *ngIf="product">
+<div class="form_container" *ngIf="customer">
     <form 
     name="form"
     #f="ngForm"
@@ -13,23 +13,15 @@
         </div>
 
         <div class="group">
-            <label for="quantity">Quantity</label>
-            <input type="text" name="quantity" id="quantity" [(ngModel)]="form.quantity" #quantity="ngModel" required>
+            <label for="quantity">Email</label>
+            <input type="text" name="quantity" id="quantity" [(ngModel)]="form.email" #quantity="ngModel" required>
             <div class="quantity_error" *ngIf="quantity.invalid && f.submitted">
                 Quantity is required    
             </div>
         </div>
 
         <div class="group">
-            <label for="price">price</label>
-            <input type="text" name="price" id="category" [(ngModel)]="form.price" #price="ngModel" required>
-            <div class="price" *ngIf="price.invalid && f.submitted">
-                Price is required    
-            </div>
-        </div>
-
-        <div class="group">
-            <button>Save product</button>
+            <button class="btn btn-info">Save customer</button>
         </div>
     </form>
 </div>

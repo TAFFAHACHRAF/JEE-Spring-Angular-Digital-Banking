@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'src/app/_services/product.service';
-import { ProductData } from 'src/app/_interfaces/ProductData';
 import { Router } from '@angular/router';
+import { Customer } from 'src/app/_interfaces/customer';
+import { CustomerService } from 'src/app/_services/customer.service';
 
 @Component({
   selector: 'app-p-add',
@@ -11,23 +11,23 @@ import { Router } from '@angular/router';
 
 export class PAddComponent implements OnInit {
   
-  form: ProductData = {
+  form: Customer = {
+    id:0,
     name: "",
-    quantity: 0,
-    price: 0
+    email: ""
   };
 
   constructor(
-    private productService: ProductService,
+    private customerService: CustomerService,
     private router: Router
     ) {}
 
   ngOnInit(): void {}
 
   onSubmit(): void {
-    this.productService.addProduct(this.form).subscribe(
+    this.customerService.addCustomer(this.form).subscribe(
       (data) =>{
-        this.router.navigate(["admin/product"])
+        this.router.navigate(["admin/customer"])
       }
       );
   }

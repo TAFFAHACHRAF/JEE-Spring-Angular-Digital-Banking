@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductData } from 'src/app/_interfaces/ProductData';
-import { ProductService } from 'src/app/_services/product.service';
+import { Customer } from 'src/app/_interfaces/customer';
+import { CustomerService } from 'src/app/_services/customer.service';
 
 @Component({
   selector: 'app-p-edit',
@@ -11,30 +11,30 @@ import { ProductService } from 'src/app/_services/product.service';
 
 export class PEditComponent implements OnInit {
   id!: number;
-  product!: ProductData;
-
-  form: ProductData = {
-    name: "",
-    price: 0,
-    quantity: 0
-  };
+  customer!: Customer;
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService,
+    private customerService: CustomerService,
     private router: Router
   ) {}
+
+  form: Customer = {
+    id: 0,
+    name: "",
+    email: ""
+  };
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.id = params['id'];
-      this.productService.getProductById(this.id).subscribe(
-        (data: ProductData) => {
-          this.product = data;
+      this.customerService.getCustomerById(this.id).subscribe(
+        (data: Customer) => {
+          this.customer = data;
           this.form = {
-            name: this.product.name,
-            quantity: this.product.quantity,
-            price: this.product.price
+            id:this.customer.id,
+            name: this.customer.name,
+            email: this.customer.email
           };
         },
         (error: any) => {
@@ -45,9 +45,9 @@ export class PEditComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.productService.updateProduct(this.form, this.id).subscribe(
-      (data: ProductData) => {
-        this.router.navigate(["admin/product"])
+    this.customerService.updateCustomer(this.form, this.id).subscribe(
+      (data: Customer) => {
+        this.router.navigate(["admin/customer"])
         // Handle success response
       },
       (error: any) => {

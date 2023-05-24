@@ -10,17 +10,9 @@
   
       <div class="form-group">
         <label for="quantity">Quantity</label>
-        <input type="text" class="form-control" name="quantity" id="quantity" [(ngModel)]="form.quantity" #quantity="ngModel" required>
+        <input type="text" class="form-control" name="quantity" id="quantity" [(ngModel)]="form.email" #quantity="ngModel" required>
         <div class="invalid-feedback" *ngIf="quantity.invalid && f.submitted">
           Quantity is required
-        </div>
-      </div>
-  
-      <div class="form-group">
-        <label for="price">Price</label>
-        <input type="text" class="form-control" name="price" id="price" [(ngModel)]="form.price" #price="ngModel" required>
-        <div class="invalid-feedback" *ngIf="price.invalid && f.submitted">
-          Price is required
         </div>
       </div>
   
