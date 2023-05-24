@@ -1,5 +1,6 @@
 package taffah.achraf.ebankingbackend.services;
 
+import lombok.AllArgsConstructor;
 import taffah.achraf.ebankingbackend.entities.BankAccount;
 import taffah.achraf.ebankingbackend.entities.CurrentAccount;
 import taffah.achraf.ebankingbackend.entities.SavingAccount;
@@ -10,8 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
+@AllArgsConstructor
 public class BankService {
-    @Autowired
     private BankAccountRepository bankAccountRepository;
     public void consulter(){
         BankAccount bankAccount=

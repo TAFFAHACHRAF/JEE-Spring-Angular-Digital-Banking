@@ -1,5 +1,6 @@
 package taffah.achraf.ebankingbackend.web;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import taffah.achraf.ebankingbackend.dtos.*;
 import taffah.achraf.ebankingbackend.exceptions.BalanceNotSufficientException;
 import taffah.achraf.ebankingbackend.exceptions.BankAccountNotFoundException;

@@ -1,5 +1,6 @@
 package taffah.achraf.ebankingbackend.web;
 
+import lombok.AllArgsConstructor;
 import taffah.achraf.ebankingbackend.entities.ERole;
 import taffah.achraf.ebankingbackend.entities.Role;
 import taffah.achraf.ebankingbackend.entities.User;
@@ -11,7 +12,6 @@ import taffah.achraf.ebankingbackend.repositories.RoleRepository;
 import taffah.achraf.ebankingbackend.repositories.UserRepository;
 import taffah.achraf.ebankingbackend.security.jwt.JwtUtils;
 import taffah.achraf.ebankingbackend.security.services.UserDetailsImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -29,26 +29,16 @@ import java.util.stream.Collectors;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
+@AllArgsConstructor
 public class AuthController {
-  @Autowired
   AuthenticationManager authenticationManager;
-
-  @Autowired
   UserRepository userRepository;
-
-  @Autowired
   RoleRepository roleRepository;
-
-  @Autowired
   PasswordEncoder encoder;
-
-  @Autowired
   JwtUtils jwtUtils;
 
   @PostMapping("/signin")
   public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
-    System.out.println(loginRequest.getUsername());
-    System.out.println(loginRequest.getPassword());
 
     Authentication authentication = authenticationManager.authenticate(
         new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
@@ -103,7 +93,7 @@ public class AuthController {
           roles.add(adminRole);
 
           break;
-        case "mod":
+        case "customer":
           Role modRole = roleRepository.findByName(ERole.ROLE_MODERATOR)
               .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
           roles.add(modRole);
