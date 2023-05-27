@@ -12,6 +12,7 @@ import { CustomerService } from 'src/app/_services/customer.service';
 export class PEditComponent implements OnInit {
   id!: number;
   customer!: Customer;
+  public currentPath = this.router.url
 
   constructor(
     private route: ActivatedRoute,

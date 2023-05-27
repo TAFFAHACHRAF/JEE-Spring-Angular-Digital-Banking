@@ -1,7 +1,10 @@
-<div class="p-3">
+<div class="p-4" style="width:1350px;">
     <div class="card">
       <div class="card-body">
-        <div class="input-group mb-3">
+        <div>
+          {{currentPath}}
+        </div>
+        <div class="input-group mb-3 p-2 mt-4">
           <input type="text" class="form-control" placeholder="Search" [(ngModel)]="keyword">
           <button class="btn btn-outline-success" type="button">
             <i class="bi bi-search"></i> Search
@@ -22,8 +25,8 @@
               <td>{{customer.id}}</td>
               <td>{{customer.name}}</td>
               <td>{{customer.email}}</td>
-              <td><a class="btn btn-primary" [routerLink]="['edit', customer.id]">Edit</a></td>
-              <td><a class="btn btn-danger" [routerLink]="['delete', customer.id]">Delete</a></td>
+              <td><a class="btn btn-outline-success" [routerLink]="['edit', customer.id]">Edit</a></td>
+              <td><a class="btn btn-outline-danger" (click)="deleteCustomer(customer.id)">Delete</a></td>
             </tr>
           </tbody>
         </table>

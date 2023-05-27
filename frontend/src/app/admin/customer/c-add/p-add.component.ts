@@ -16,7 +16,7 @@ export class PAddComponent implements OnInit {
     name: "",
     email: ""
   };
-
+  public currentPath = this.router.url
   constructor(
     private customerService: CustomerService,
     private router: Router

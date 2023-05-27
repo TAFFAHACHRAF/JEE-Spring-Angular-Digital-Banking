@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Customer } from 'src/app/_interfaces/customer';
 import { CustomerService } from 'src/app/_services/customer.service';
 
@@ -13,8 +14,10 @@ export class PIndexComponent implements OnInit {
   public currentPage: number = 1;
   public totalPages: number=5;
   public pageSize: number = 5;
+  public currentPath = this.router.url
 
-  constructor(private customerService: CustomerService) { }
+  constructor(private customerService: CustomerService,
+    private router : Router) { }
 
   ngOnInit(): void {
     this.getCustomers(this.currentPage, this.pageSize);
@@ -27,6 +30,12 @@ export class PIndexComponent implements OnInit {
         //this.totalPages=this.products.length / this.pageSize
       }
     );
+  }
+
+  deleteCustomer(id:number){
+    this.customerService.deleteCustomer(id).subscribe({
+    })
+    this.customers = this.customers.filter(customer => customer.id !== id);
   }
 
   // searchProducts() {

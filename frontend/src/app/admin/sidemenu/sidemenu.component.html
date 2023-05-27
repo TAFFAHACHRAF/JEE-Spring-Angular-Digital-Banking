@@ -1,40 +1,39 @@
-<nav class="sidebar bg-light p-2">
-    <a class="simple_link" [routerLink]="['/']">Retour accueil</a>
-    <ul id="sidemenu" class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['dashbord']">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['customer']">Customers</a>
-        <ul class="nav flex-column ml-3">
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['customer']">
-              <button>Liste</button>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['customer/add']">
-              <button>Ajouter</button>
-            </a>
-          </li>
-        </ul>
-      </li>
+<nav class="sidebar bg-danger p-2">
+  <a class="simple_link" [routerLink]="['/']"><i class="bi bi-arrow-left"></i> Retour accueil</a>
+  <ul id="sidemenu" class="nav flex-column">
+    <!-- <li class="nav-item">
+      <a class="nav-link" [routerLink]="['dashbord']">Dashboard</a>
+    </li> -->
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['customer']">Customers</a>
+      <ul class="nav flex-column ml-3">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['customer']">
+            <button class="btn btn-outline-light">Liste</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['customer/add']">
+            <button class="btn btn-outline-light">Ajouter</button>
+          </a>
+        </li>
+      </ul>
+    </li>
 
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['account']">Accounts</a>
-        <ul class="nav flex-column ml-3">
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['account']">
-              <button>Liste</button>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['account/add']">
-              <button>Ajouter</button>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-  
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['account']">Accounts</a>
+      <ul class="nav flex-column ml-3">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['account']">
+            <button class="btn btn-outline-light">Liste</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['account/add']">
+            <button class="btn btn-outline-light">Ajouter</button>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

@@ -11,7 +11,7 @@ import { AuthService } from '../_services/auth.service';
 @NgModule({
   declarations: [
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
   ],
   imports: [
     CommonModule,

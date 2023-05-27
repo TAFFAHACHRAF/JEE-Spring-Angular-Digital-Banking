@@ -1,5 +1,21 @@
-header{
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-}
+.logo-img {
+    width: 40px;
+    height: auto;
+    /* margin-right: 10px; */
+  }
+  
+  .logo-text {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .logout-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+  }
+  
+  .logout-btn:hover {
+    background-color: #ff5722;
+  }
+  
