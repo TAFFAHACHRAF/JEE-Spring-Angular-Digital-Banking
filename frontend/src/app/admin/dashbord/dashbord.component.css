@@ -1,0 +1,39 @@
+.chart-container {
+    width: 400px;
+    height: 200px;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .bar {
+    width: 14.28%;
+    background-color: #6c757d;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.3s ease-in-out;
+  }
+  
+  /* Add different colors for each bar */
+  .bar:nth-child(1) {
+    background-color: #007bff;
+  }
+  .bar:nth-child(2) {
+    background-color: #6c757d;
+  }
+  .bar:nth-child(3) {
+    background-color: #28a745;
+  }
+  .bar:nth-child(4) {
+    background-color: #ffc107;
+  }
+  .bar:nth-child(5) {
+    background-color: #dc3545;
+  }
+  .bar:nth-child(6) {
+    background-color: #17a2b8;
+  }
+  .bar:nth-child(7) {
+    background-color: #6610f2;
+  }
+  

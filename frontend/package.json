@@ -22,8 +22,11 @@
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
     "@ng-bootstrap/ng-bootstrap": "^14.1.1",
+    "@types/chart.js": "^2.9.37",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.5",
+    "chart.js": "^3.9.1",
+    "ng2-charts": "^3.1.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dashbord',
+  selector: 'app-dashboard',
   templateUrl: './dashbord.component.html',
   styleUrls: ['./dashbord.component.css']
 })
-export class DashbordComponent {
+export class DashboardComponent implements OnInit{
+  public currentPath = this.router.url
 
+  constructor(private router:Router){
+  }
+
+  ngOnInit(): void {
+
+  }
 }
