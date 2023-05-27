@@ -85,7 +85,5 @@ public class EbankingBackendApplication {
 
             userRepository.save(user);
         };
-
     }
-
 }

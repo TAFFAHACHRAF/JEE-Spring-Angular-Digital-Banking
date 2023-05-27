@@ -18,7 +18,7 @@ import java.util.List;
 public class CustomerRestController {
     private BankAccountService bankAccountService;
 
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/customers")
     public List<CustomerDTO> customers(){
         return bankAccountService.listCustomers();
