@@ -29,7 +29,10 @@ export class LoginComponent implements OnInit{
         console.log(data.accessToken)
         this.tokenService.saveToken(data.accessToken)
       },
-      err => console.log(err)
+      err => {
+        console.log(err)
+        alert("email or password is not correct");
+      }
     )
   }
 }

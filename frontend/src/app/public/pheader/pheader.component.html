@@ -1,28 +1,28 @@
 <header class="ps-4 ms-4 mt-2">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-      <a class="navbar-brand" href="#">
-        <img src="assets/logo.png" alt="TAFFAH BANK Logo" width="50">
-        <span style="font-weight: bold; font-size: 24px;">TAFFAH BANK</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['home']">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['about_me']">About me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://digital-bancking-documentation.netlify.app">Documentation</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['admin']">Log in</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo.png" alt="TAFFAH BANK Logo" width="50">
+      <span style="font-weight: bold; font-size: 24px;">TAFFAH BANK</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link btn" [ngClass]="{'active bg-warning': isHomeActive}" [routerLink]="['home']" (click)="setActive('home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn" [ngClass]="{'active bg-warning': !isHomeActive}" [routerLink]="['about_me']" (click)="setActive('about_me')">About me</a>
+        </li>        
+        <li class="nav-item">
+          <a class="nav-link btn" href="https://digital-bancking-frontend-docs.netlify.app">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn" [routerLink]="['admin']">Log in</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </header>

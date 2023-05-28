@@ -1,24 +1,25 @@
 <div class="container">
-  <div class="form-container bg-white">
+    <div class="form-container bg-white">
       <div class="form-header">
-          <h3>Login</h3>
+        <h3>Login</h3>
       </div>
       <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" class="needs-validation">
-          <div class="form-group">
-              <label for="username"><i class="bi bi-person"></i> Username</label>
-              <input type="email" name="username" id="username" [(ngModel)]="form.username" #username="ngModel" class="form-control" required>
-              <div class="invalid-feedback" *ngIf="username.invalid && f.submitted">
-                  Username is required
-              </div>
+        <div class="form-group">
+          <label for="username"><i class="bi bi-person"></i> Username</label>
+          <input type="text" name="username" id="username" [(ngModel)]="form.username" #username="ngModel" class="form-control" required>
+          <div class="invalid-feedback" *ngIf="username.invalid && (username.dirty || username.touched)">
+            <div *ngIf="username.errors">Username is invalid</div>
           </div>
-          <div class="form-group">
-              <label for="password"><i class="bi bi-lock"></i> Password</label>
-              <input type="password" name="password" id="password" [(ngModel)]="form.password" #password="ngModel" class="form-control">
-          </div>
-          <div class="form-group mt-4">
-              <button class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Login</button>
-              <button class="btn btn-primary ms-4" [routerLink]="['/']">Home</button>
-            </div>
+        </div>
+        <div class="form-group">
+          <label for="password"><i class="bi bi-lock"></i> Password</label>
+          <input type="password" name="password" id="password" [(ngModel)]="form.password" #password="ngModel" class="form-control">
+        </div>
+        <div class="form-group mt-4">
+          <button class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Login</button>
+          <button class="btn btn-primary ms-4" [routerLink]="['/']">Home</button>
+        </div>
       </form>
+    </div>
   </div>
-</div>
+  

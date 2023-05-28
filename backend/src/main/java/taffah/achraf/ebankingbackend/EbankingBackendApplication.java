@@ -73,11 +73,11 @@ public class EbankingBackendApplication {
             roles.add(role);
 
             User user = new User();
-            user.setEmail("walo@gmail.com");
-            user.setUsername("walo@gmail.com");
+            user.setEmail("taffah@gmail.com");
+            user.setUsername("taffah@gmail.com");
             user.setRoles(roles);
 
-            String password = "walo@gmail.com";
+            String password = "taffah@gmail.com";
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
             String encodedPassword = encoder.encode(password);
 

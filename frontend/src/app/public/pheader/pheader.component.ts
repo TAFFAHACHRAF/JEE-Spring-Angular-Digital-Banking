@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./pheader.component.css']
 })
 export class PheaderComponent {
+  isHomeActive: boolean = true;
 
+  setActive(navItem: string) {
+    if (navItem === 'home') {
+      this.isHomeActive = true;
+    } else {
+      this.isHomeActive = false;
+    }
+  }
 }
