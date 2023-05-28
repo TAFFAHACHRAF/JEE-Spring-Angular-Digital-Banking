@@ -265,22 +265,41 @@ export class AheaderComponent {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;header&gt;
-    &lt;div style&#x3D;&quot;background-color: black;color: white;&quot;&gt;
-        HEADER
+  &lt;div class&#x3D;&quot;bg-danger text-white py-2&quot;&gt; &lt;!-- Adjusted the py-2 class for smaller height --&gt;
+    &lt;div class&#x3D;&quot;d-flex justify-content-start align-items-start ms-2&quot; [routerLink]&#x3D;&quot;[&#x27;dashbord&#x27;]&quot;&gt;
+      &lt;img src&#x3D;&quot;assets/logo.png&quot; alt&#x3D;&quot;TAFFAH BANCK Logo&quot; class&#x3D;&quot;logo-img&quot;&gt;
+      &lt;h1 class&#x3D;&quot;logo-text btn text-white&quot;&gt;TAFFAH BANCK&lt;/h1&gt;
     &lt;/div&gt;
-    &lt;button (click)&#x3D;&quot;logout()&quot;&gt;logout&lt;/button&gt;
-&lt;/header&gt;</code></pre>
+  &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
                     <code>./aheader.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">header{
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-}</code></pre>
+                <pre class="line-numbers"><code class="language-scss">.logo-img {
+    width: 40px;
+    height: auto;
+    /* margin-right: 10px; */
+  }
+  
+  .logo-text {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .logout-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+  }
+  
+  .logout-btn:hover {
+    background-color: #ff5722;
+  }
+  </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -308,8 +327,8 @@ export class AheaderComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><header>    <div style="background-color: black;color: white;">        HEADER    </div>    <button (click)="logout()">logout</button></header></div>'
-    var COMPONENTS = [{'name': 'AheaderComponent', 'selector': 'app-aheader'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashbordComponent', 'selector': 'app-dashbord'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'PAddComponent', 'selector': 'app-p-add'},{'name': 'PDeleteComponent', 'selector': 'app-p-delete'},{'name': 'PEditComponent', 'selector': 'app-p-edit'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PIndexComponent', 'selector': 'app-p-index'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'}];
+        var COMPONENT_TEMPLATE = '<div><header>  <div class="bg-danger text-white py-2"> <!-- Adjusted the py-2 class for smaller height -->    <div class="d-flex justify-content-start align-items-start ms-2" [routerLink]="[\'dashbord\']">      <img src="assets/logo.png" alt="TAFFAH BANCK Logo" class="logo-img">      <h1 class="logo-text btn text-white">TAFFAH BANCK</h1>    </div>  </div></header></div>'
+    var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-about-us'},{'name': 'AheaderComponent', 'selector': 'app-aheader'},{'name': 'AIndexComponent', 'selector': 'app-a-accounts'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'PAddComponent', 'selector': 'app-p-add'},{'name': 'PEditComponent', 'selector': 'app-p-edit'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PIndexComponent', 'selector': 'app-p-index'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AheaderComponent'};
 </script>

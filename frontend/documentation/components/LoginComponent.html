@@ -395,33 +395,29 @@ export class LoginComponent implements OnInit{
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;form_container&quot;&gt;
-    &lt;div&gt;
-        &lt;div&gt;Email : {{ form.username }}&lt;/div&gt;
-        &lt;div&gt;Password : {{ form.password }}&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;form 
-    name&#x3D;&quot;form&quot;
-    #f&#x3D;&quot;ngForm&quot;
-    (ngSubmit)&#x3D;&quot;f.form.valid &amp;&amp; onSubmit()&quot;
-    &gt;
-        &lt;div class&#x3D;&quot;group&quot;&gt;
-            &lt;label for&#x3D;&quot;username&quot;&gt;Username&lt;/label&gt;
-            &lt;input type&#x3D;&quot;email&quot; name&#x3D;&quot;username&quot; id&#x3D;&quot;username&quot; [(ngModel)]&#x3D;&quot;form.username&quot; #username&#x3D;&quot;ngModel&quot; required&gt;
-            &lt;div class&#x3D;&quot;username_error&quot; *ngIf&#x3D;&quot;username.invalid &amp;&amp; f.submitted&quot;&gt;
-                Username is required    
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;div class&#x3D;&quot;form-container bg-white&quot;&gt;
+      &lt;div class&#x3D;&quot;form-header&quot;&gt;
+          &lt;h3&gt;Login&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;form name&#x3D;&quot;form&quot; #f&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;f.form.valid &amp;&amp; onSubmit()&quot; class&#x3D;&quot;needs-validation&quot;&gt;
+          &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;username&quot;&gt;&lt;i class&#x3D;&quot;bi bi-person&quot;&gt;&lt;/i&gt; Username&lt;/label&gt;
+              &lt;input type&#x3D;&quot;email&quot; name&#x3D;&quot;username&quot; id&#x3D;&quot;username&quot; [(ngModel)]&#x3D;&quot;form.username&quot; #username&#x3D;&quot;ngModel&quot; class&#x3D;&quot;form-control&quot; required&gt;
+              &lt;div class&#x3D;&quot;invalid-feedback&quot; *ngIf&#x3D;&quot;username.invalid &amp;&amp; f.submitted&quot;&gt;
+                  Username is required
+              &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;label for&#x3D;&quot;password&quot;&gt;&lt;i class&#x3D;&quot;bi bi-lock&quot;&gt;&lt;/i&gt; Password&lt;/label&gt;
+              &lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot; id&#x3D;&quot;password&quot; [(ngModel)]&#x3D;&quot;form.password&quot; #password&#x3D;&quot;ngModel&quot; class&#x3D;&quot;form-control&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;form-group mt-4&quot;&gt;
+              &lt;button class&#x3D;&quot;btn btn-primary&quot;&gt;&lt;i class&#x3D;&quot;bi bi-box-arrow-in-right&quot;&gt;&lt;/i&gt; Login&lt;/button&gt;
+              &lt;button class&#x3D;&quot;btn btn-primary ms-4&quot; [routerLink]&#x3D;&quot;[&#x27;/&#x27;]&quot;&gt;Home&lt;/button&gt;
             &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class&#x3D;&quot;group&quot;&gt;
-            &lt;label for&#x3D;&quot;password&quot;&gt;Password&lt;/label&gt;
-            &lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot; id&#x3D;&quot;password&quot; [(ngModel)]&#x3D;&quot;form.password&quot; #password&#x3D;&quot;ngModel&quot;&gt;
-        &lt;/div&gt;
-
-        &lt;div class&#x3D;&quot;group&quot;&gt;
-            &lt;button&gt;Login&lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/form&gt;
+      &lt;/form&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
 
@@ -429,27 +425,38 @@ export class LoginComponent implements OnInit{
                 <p class="comment">
                     <code>./login.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.form_container{
-    width: 300px;
-    margin: 0 auto;
-    margin-top: 50px;
+                <pre class="line-numbers"><code class="language-scss">.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
-
-.form_container .goup{
-    margin-bottom: 15px;
+.form-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 10px;
 }
-
-.form_container label{
-    display: block;
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
 }
-
-.form_container button{
-    width: 100px;
-    margin: 0 auto;
+h3 {
+  color: black;
 }
-
-.username_error{
-    color: red;
+label {
+  color: black;
+}
+.btn-primary {
+  background-color: orange;
+  border-color: orange;
+}
+.btn-primary:hover {
+  background-color: #f96600;
+  border-color: #f96600;
+}
+.invalid-feedback {
+  color: #dc3545;
 }</code></pre>
     </div>
 
@@ -478,8 +485,8 @@ export class LoginComponent implements OnInit{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="form_container">    <div>        <div>Email : {{ form.username }}</div>        <div>Password : {{ form.password }}</div>    </div>    <form     name="form"    #f="ngForm"    (ngSubmit)="f.form.valid && onSubmit()"    >        <div class="group">            <label for="username">Username</label>            <input type="email" name="username" id="username" [(ngModel)]="form.username" #username="ngModel" required>            <div class="username_error" *ngIf="username.invalid && f.submitted">                Username is required                </div>        </div>        <div class="group">            <label for="password">Password</label>            <input type="password" name="password" id="password" [(ngModel)]="form.password" #password="ngModel">        </div>        <div class="group">            <button>Login</button>        </div>    </form></div></div>'
-    var COMPONENTS = [{'name': 'AheaderComponent', 'selector': 'app-aheader'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashbordComponent', 'selector': 'app-dashbord'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'PAddComponent', 'selector': 'app-p-add'},{'name': 'PDeleteComponent', 'selector': 'app-p-delete'},{'name': 'PEditComponent', 'selector': 'app-p-edit'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PIndexComponent', 'selector': 'app-p-index'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'}];
+        var COMPONENT_TEMPLATE = '<div><div class="container">  <div class="form-container bg-white">      <div class="form-header">          <h3>Login</h3>      </div>      <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" class="needs-validation">          <div class="form-group">              <label for="username"><i class="bi bi-person"></i> Username</label>              <input type="email" name="username" id="username" [(ngModel)]="form.username" #username="ngModel" class="form-control" required>              <div class="invalid-feedback" *ngIf="username.invalid && f.submitted">                  Username is required              </div>          </div>          <div class="form-group">              <label for="password"><i class="bi bi-lock"></i> Password</label>              <input type="password" name="password" id="password" [(ngModel)]="form.password" #password="ngModel" class="form-control">          </div>          <div class="form-group mt-4">              <button class="btn btn-primary"><i class="bi bi-box-arrow-in-right"></i> Login</button>              <button class="btn btn-primary ms-4" [routerLink]="[\'/\']">Home</button>            </div>      </form>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-about-us'},{'name': 'AheaderComponent', 'selector': 'app-aheader'},{'name': 'AIndexComponent', 'selector': 'app-a-accounts'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'PAddComponent', 'selector': 'app-p-add'},{'name': 'PEditComponent', 'selector': 'app-p-edit'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PIndexComponent', 'selector': 'app-p-index'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
 </script>

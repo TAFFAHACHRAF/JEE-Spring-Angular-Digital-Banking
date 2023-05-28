@@ -8,12 +8,15 @@ import { TokenInterceptorProvider } from './_helpers/token.interceptor';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+// import { AAAddComponent } from './admin/account/aa-add/a-add.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent
+    // AAAddComponent
   ],
   imports: [
     BrowserModule,

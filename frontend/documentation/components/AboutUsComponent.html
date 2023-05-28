@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  AlayoutComponent</li>
+  AboutUsComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,7 +64,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/admin/alayout/alayout.component.ts</code>
+    <code>src/app/public/about-us/about-us.component.ts</code>
 </p>
 
 
@@ -89,19 +89,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-alayout</code></td>
+                <td class="col-md-9"><code>app-about-us</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./alayout.component.css</code></td>
+                <td class="col-md-9"><code>./about-us.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./alayout.component.html</code></td>
+                <td class="col-md-9"><code>./about-us.component.html</code></td>
             </tr>
 
 
@@ -130,45 +130,45 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-alayout&#x27;,
-  templateUrl: &#x27;./alayout.component.html&#x27;,
-  styleUrls: [&#x27;./alayout.component.css&#x27;]
+  selector: &#x27;app-about-us&#x27;,
+  templateUrl: &#x27;./about-us.component.html&#x27;,
+  styleUrls: [&#x27;./about-us.component.css&#x27;]
 })
-export class AlayoutComponent {
+export class AboutUsComponent {
 
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;app-aheader&gt;&lt;/app-aheader&gt;
-&lt;div class&#x3D;&quot;admin_body&quot;&gt;
-    &lt;div class&#x3D;&quot;menu&quot;&gt;
-        &lt;app-sidemenu&gt;&lt;/app-sidemenu&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container align-center&quot;&gt;
+    &lt;div class&#x3D;&quot;card p-4&quot;&gt;
+        &lt;img class&#x3D;&quot;profile-image&quot; src&#x3D;&quot;assets/profile.jpg&quot; alt&#x3D;&quot;Profile Image&quot;&gt;
+        &lt;p class&#x3D;&quot;about-me&quot;&gt;I am Achraf TAFFAH a second-year engineering student at ENSET Mohammedia, specializing in software engineering and distributed computer systems.&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div class&#x3D;&quot;admin_container&quot;&gt;
-        &lt;router-outlet&gt;&lt;/router-outlet&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;  </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./alayout.component.css</code>
+                    <code>./about-us.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.admin_body{
-    display: flex;
+                <pre class="line-numbers"><code class="language-scss">.container {
+    max-width: 800px;
+    margin: 5% auto;
+    padding: 40px;
 }
-
-.menu{
-    flex-grow: 1;
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin: 5% 30%;
 }
-
-.admin_container{
-    flex-grow: 8;
-}
-</code></pre>
+.about-me {
+    font-size: 18px;
+    margin-bottom: 20px;
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -196,10 +196,10 @@ export class AlayoutComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-aheader></app-aheader><div class="admin_body">    <div class="menu">        <app-sidemenu></app-sidemenu>    </div>    <div class="admin_container">        <router-outlet></router-outlet>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="container align-center">    <div class="card p-4">        <img class="profile-image" src="assets/profile.jpg" alt="Profile Image">        <p class="about-me">I am Achraf TAFFAH a second-year engineering student at ENSET Mohammedia, specializing in software engineering and distributed computer systems.</p>    </div></div>  </div>'
     var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-about-us'},{'name': 'AheaderComponent', 'selector': 'app-aheader'},{'name': 'AIndexComponent', 'selector': 'app-a-accounts'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'PAddComponent', 'selector': 'app-p-add'},{'name': 'PEditComponent', 'selector': 'app-p-edit'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PIndexComponent', 'selector': 'app-p-index'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AlayoutComponent'};
+    var ACTUAL_COMPONENT = {'name': 'AboutUsComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -245,7 +245,7 @@ export class AlayoutComponent {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AlayoutComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'AboutUsComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

@@ -6,7 +6,7 @@ import { AccountDetails } from 'src/app/_interfaces/account';
 import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
 
 @Component({
-  selector: 'app-accounts',
+  selector: 'app-a-accounts',
   templateUrl: './a-index.component.html',
   styleUrls: ['./a-index.component.css']
 })

@@ -141,22 +141,74 @@ export class PheaderComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;header&gt;
-    &lt;nav&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a [routerLink]&#x3D;&quot;[&#x27;home&#x27;]&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a [routerLink]&#x3D;&quot;[&#x27;admin/product&#x27;]&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a [routerLink]&#x3D;&quot;[&#x27;admin&#x27;]&quot;&gt;Admin&lt;/a&gt;&lt;/li&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;header class&#x3D;&quot;ps-4 ms-4 mt-2&quot;&gt;
+    &lt;nav class&#x3D;&quot;navbar navbar-expand-lg navbar-light bg-white fixed-top&quot;&gt;
+      &lt;a class&#x3D;&quot;navbar-brand&quot; href&#x3D;&quot;#&quot;&gt;
+        &lt;img src&#x3D;&quot;assets/logo.png&quot; alt&#x3D;&quot;TAFFAH BANK Logo&quot; width&#x3D;&quot;50&quot;&gt;
+        &lt;span style&#x3D;&quot;font-weight: bold; font-size: 24px;&quot;&gt;TAFFAH BANK&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;button class&#x3D;&quot;navbar-toggler&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#navbarNav&quot;
+        aria-controls&#x3D;&quot;navbarNav&quot; aria-expanded&#x3D;&quot;false&quot; aria-label&#x3D;&quot;Toggle navigation&quot;&gt;
+        &lt;span class&#x3D;&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;div class&#x3D;&quot;collapse navbar-collapse justify-content-center&quot; id&#x3D;&quot;navbarNav&quot;&gt;
+        &lt;ul class&#x3D;&quot;navbar-nav&quot;&gt;
+          &lt;li class&#x3D;&quot;nav-item&quot;&gt;
+            &lt;a class&#x3D;&quot;nav-link&quot; [routerLink]&#x3D;&quot;[&#x27;home&#x27;]&quot;&gt;Home&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class&#x3D;&quot;nav-item&quot;&gt;
+            &lt;a class&#x3D;&quot;nav-link&quot; [routerLink]&#x3D;&quot;[&#x27;about_me&#x27;]&quot;&gt;About me&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class&#x3D;&quot;nav-item&quot;&gt;
+            &lt;a class&#x3D;&quot;nav-link&quot; href&#x3D;&quot;https://digital-bancking-documentation.netlify.app&quot;&gt;Documentation&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class&#x3D;&quot;nav-item&quot;&gt;
+            &lt;a class&#x3D;&quot;nav-link&quot; [routerLink]&#x3D;&quot;[&#x27;admin&#x27;]&quot;&gt;Log in&lt;/a&gt;
+          &lt;/li&gt;
         &lt;/ul&gt;
+      &lt;/div&gt;
     &lt;/nav&gt;
-&lt;/header&gt;</code></pre>
+&lt;/header&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
                     <code>./pheader.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">.navbar-nav .nav-item {
+    margin-right: 10px;
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 20px;
+    padding: 5px 10px; /* Updated height values */
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    background-color: orange;
+    color: white;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+.navbar-brand {
+    display: inline-block;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+.navbar-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+  </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -184,8 +236,8 @@ export class PheaderComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><header>    <nav>        <ul>            <li><a [routerLink]="[\'home\']">Home</a></li>            <li><a [routerLink]="[\'admin/product\']">Products</a></li>            <li><a [routerLink]="[\'admin\']">Admin</a></li>        </ul>    </nav></header></div>'
-    var COMPONENTS = [{'name': 'AheaderComponent', 'selector': 'app-aheader'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashbordComponent', 'selector': 'app-dashbord'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'PAddComponent', 'selector': 'app-p-add'},{'name': 'PDeleteComponent', 'selector': 'app-p-delete'},{'name': 'PEditComponent', 'selector': 'app-p-edit'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PIndexComponent', 'selector': 'app-p-index'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'}];
+        var COMPONENT_TEMPLATE = '<div><header class="ps-4 ms-4 mt-2">    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">      <a class="navbar-brand" href="#">        <img src="assets/logo.png" alt="TAFFAH BANK Logo" width="50">        <span style="font-weight: bold; font-size: 24px;">TAFFAH BANK</span>      </a>      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">        <span class="navbar-toggler-icon"></span>      </button>      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">        <ul class="navbar-nav">          <li class="nav-item">            <a class="nav-link" [routerLink]="[\'home\']">Home</a>          </li>          <li class="nav-item">            <a class="nav-link" [routerLink]="[\'about_me\']">About me</a>          </li>          <li class="nav-item">            <a class="nav-link" href="https://digital-bancking-documentation.netlify.app">Documentation</a>          </li>          <li class="nav-item">            <a class="nav-link" [routerLink]="[\'admin\']">Log in</a>          </li>        </ul>      </div>    </nav></header></div>'
+    var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-about-us'},{'name': 'AheaderComponent', 'selector': 'app-aheader'},{'name': 'AIndexComponent', 'selector': 'app-a-accounts'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'PAddComponent', 'selector': 'app-p-add'},{'name': 'PEditComponent', 'selector': 'app-p-edit'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PIndexComponent', 'selector': 'app-p-index'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'PheaderComponent'};
 </script>

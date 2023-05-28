@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  SidemenuComponent</li>
+  DashboardComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,7 +64,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/admin/sidemenu/sidemenu.component.ts</code>
+    <code>src/app/admin/dashbord/dashbord.component.ts</code>
 </p>
 
 
@@ -95,19 +95,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-sidemenu</code></td>
+                <td class="col-md-9"><code>app-dashboard</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./sidemenu.component.css</code></td>
+                <td class="col-md-9"><code>./dashbord.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./sidemenu.component.html</code></td>
+                <td class="col-md-9"><code>./dashbord.component.html</code></td>
             </tr>
 
 
@@ -125,6 +125,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentPath" >currentPath</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -134,9 +149,6 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
-                            <li>
-                                <a href="#logout" >logout</a>
-                            </li>
                             <li>
                                 <a href="#ngOnInit" >ngOnInit</a>
                             </li>
@@ -158,12 +170,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(tokenService: <a href="../injectables/TokenService.html" target="_self">TokenService</a>)</code>
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/admin/sidemenu/sidemenu.component.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/admin/dashbord/dashbord.component.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -181,10 +193,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>tokenService</td>
+                                                        <td>router</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/TokenService.html" target="_self" >TokenService</a></code>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -214,43 +226,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="logout"></a>
-                    <span class="name">
-                        <span ><b>logout</b></span>
-                        <a href="#logout"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>logout()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/admin/sidemenu/sidemenu.component.ts:14</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
                         <span ><b>ngOnInit</b></span>
@@ -267,8 +242,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">src/app/admin/sidemenu/sidemenu.component.ts:18</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">src/app/admin/dashbord/dashbord.component.ts:15</a></div>
                 </td>
             </tr>
 
@@ -285,125 +260,135 @@
         </tbody>
     </table>
 </section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentPath"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>currentPath</b></span>
+                        <a href="#currentPath"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.router.url</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/admin/dashbord/dashbord.component.ts:10</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import { TokenService } from &#x27;src/app/_services/token.service&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
 
 @Component({
-  selector: &#x27;app-sidemenu&#x27;,
-  templateUrl: &#x27;./sidemenu.component.html&#x27;,
-  styleUrls: [&#x27;./sidemenu.component.css&#x27;]
+  selector: &#x27;app-dashboard&#x27;,
+  templateUrl: &#x27;./dashbord.component.html&#x27;,
+  styleUrls: [&#x27;./dashbord.component.css&#x27;]
 })
-export class SidemenuComponent implements OnInit{
-  constructor(private tokenService : TokenService){
-    
-  }
-  
-  logout(): void{
-    this.tokenService.logOut()
+export class DashboardComponent implements OnInit{
+  public currentPath &#x3D; this.router.url
+
+  constructor(private router:Router){
   }
 
   ngOnInit(): void {
-    
+
   }
 }
-
-
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;nav class&#x3D;&quot;sidebar bg-danger p-2&quot;&gt;
-  &lt;a class&#x3D;&quot;simple_link&quot; [routerLink]&#x3D;&quot;[&#x27;/&#x27;]&quot;&gt;&lt;i class&#x3D;&quot;bi bi-arrow-left&quot;&gt;&lt;/i&gt; Retour accueil&lt;/a&gt;
-  &lt;ul id&#x3D;&quot;sidemenu&quot; class&#x3D;&quot;nav flex-column&quot;&gt;
-    &lt;!-- &lt;li class&#x3D;&quot;nav-item&quot;&gt;
-      &lt;a class&#x3D;&quot;nav-link&quot; [routerLink]&#x3D;&quot;[&#x27;dashbord&#x27;]&quot;&gt;Dashboard&lt;/a&gt;
-    &lt;/li&gt; --&gt;
-    &lt;li class&#x3D;&quot;nav-item&quot;&gt;
-      &lt;a class&#x3D;&quot;nav-link&quot; [routerLink]&#x3D;&quot;[&#x27;customer&#x27;]&quot;&gt;Customers&lt;/a&gt;
-      &lt;ul class&#x3D;&quot;nav flex-column ml-3&quot;&gt;
-        &lt;li class&#x3D;&quot;nav-item&quot;&gt;
-          &lt;a class&#x3D;&quot;nav-link&quot; [routerLink]&#x3D;&quot;[&#x27;customer&#x27;]&quot;&gt;
-            &lt;button class&#x3D;&quot;btn btn-outline-light&quot;&gt;Liste&lt;/button&gt;
-          &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li class&#x3D;&quot;nav-item&quot;&gt;
-          &lt;a class&#x3D;&quot;nav-link&quot; [routerLink]&#x3D;&quot;[&#x27;customer/add&#x27;]&quot;&gt;
-            &lt;button class&#x3D;&quot;btn btn-outline-light&quot;&gt;Ajouter&lt;/button&gt;
-          &lt;/a&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-
-    &lt;li class&#x3D;&quot;nav-item&quot;&gt;
-      &lt;a class&#x3D;&quot;nav-link&quot; [routerLink]&#x3D;&quot;[&#x27;account&#x27;]&quot;&gt;Accounts&lt;/a&gt;
-      &lt;ul class&#x3D;&quot;nav flex-column ml-3&quot;&gt;
-        &lt;li class&#x3D;&quot;nav-item&quot;&gt;
-          &lt;a class&#x3D;&quot;nav-link&quot; [routerLink]&#x3D;&quot;[&#x27;account&#x27;]&quot;&gt;
-            &lt;button class&#x3D;&quot;btn btn-outline-light&quot;&gt;Liste&lt;/button&gt;
-          &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li class&#x3D;&quot;nav-item&quot;&gt;
-          &lt;a class&#x3D;&quot;nav-link&quot; [routerLink]&#x3D;&quot;[&#x27;account/add&#x27;]&quot;&gt;
-            &lt;button class&#x3D;&quot;btn btn-outline-light&quot;&gt;Ajouter&lt;/button&gt;
-          &lt;/a&gt;
-        &lt;/li&gt;
-
-        
-        &lt;li class&#x3D;&quot;nav-item&quot;&gt;
-          &lt;a class&#x3D;&quot;btn btn-outline-danger text-white&quot; (click)&#x3D;&quot;logout()&quot;&gt;&lt;i class&#x3D;&quot;bi bi-box-arrow-right&quot;&gt;&lt;/i&gt; Logout&lt;/a&gt;
-        &lt;/li&gt;
-        
-      &lt;/ul&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;p-4&quot; style&#x3D;&quot;width:1350px;&quot;&gt;
+    &lt;div class&#x3D;&quot;card&quot;&gt;
+      &lt;div class&#x3D;&quot;card-body&quot;&gt;
+        &lt;div&gt;
+          {{currentPath}}
+        &lt;/div&gt;
+        &lt;h4 class&#x3D;&quot;mt-2&quot;&gt;Accounts Statistics&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;statistics&quot;&gt;
+          &lt;div class&#x3D;&quot;statistic&quot;&gt;
+            &lt;span class&#x3D;&quot;label&quot;&gt;Total Accounts:&lt;/span&gt;
+            &lt;span class&#x3D;&quot;value&quot;&gt;100&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;statistic&quot;&gt;
+            &lt;span class&#x3D;&quot;label&quot;&gt;Active Accounts:&lt;/span&gt;
+            &lt;span class&#x3D;&quot;value&quot;&gt;80&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;statistic&quot;&gt;
+            &lt;span class&#x3D;&quot;label&quot;&gt;Inactive Accounts:&lt;/span&gt;
+            &lt;span class&#x3D;&quot;value&quot;&gt;20&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./sidemenu.component.css</code>
+                    <code>./dashbord.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.sidebar {
-  /* background-color: #343a40; Set the background color */
-  padding: 2rem; /* Add padding to the sidebar */
-  height: 680px;
-}
-
-.simple_link {
-  color: #fff; /* Set the link color to white */
-  text-decoration: none; /* Remove underline */
-  display: block; /* Display as block element */
-  margin-bottom: 1rem; /* Add margin at the bottom */
-}
-
-.nav-link {
-  color: #fff; /* Set the link color to white */
-  text-decoration: none; /* Remove underline */
-}
-
-.btn {
-  width: 100%; /* Set the button width to 100% */
-  margin-bottom: 0.5rem; /* Add margin at the bottom */
-}
-
-.btn-outline-light {
-  color: #fff; /* Set the text color to white */
-  border-color: #fff; /* Set the border color to white */
-}
-
-.btn-outline-light:hover {
-  background-color: #fff; /* Change the background color on hover */
-  color: #343a40; /* Change the text color on hover */
-}
-
-/* Optional: Add more custom styling as needed */
-</code></pre>
+                <pre class="line-numbers"><code class="language-scss">.chart-container {
+    width: 400px;
+    height: 200px;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .bar {
+    width: 14.28%;
+    background-color: #6c757d;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.3s ease-in-out;
+  }
+  
+  /* Add different colors for each bar */
+  .bar:nth-child(1) {
+    background-color: #007bff;
+  }
+  .bar:nth-child(2) {
+    background-color: #6c757d;
+  }
+  .bar:nth-child(3) {
+    background-color: #28a745;
+  }
+  .bar:nth-child(4) {
+    background-color: #ffc107;
+  }
+  .bar:nth-child(5) {
+    background-color: #dc3545;
+  }
+  .bar:nth-child(6) {
+    background-color: #17a2b8;
+  }
+  .bar:nth-child(7) {
+    background-color: #6610f2;
+  }
+  </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -431,10 +416,10 @@ export class SidemenuComponent implements OnInit{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><nav class="sidebar bg-danger p-2">  <a class="simple_link" [routerLink]="[\'/\']"><i class="bi bi-arrow-left"></i> Retour accueil</a>  <ul id="sidemenu" class="nav flex-column">    <!-- <li class="nav-item">      <a class="nav-link" [routerLink]="[\'dashbord\']">Dashboard</a>    </li> -->    <li class="nav-item">      <a class="nav-link" [routerLink]="[\'customer\']">Customers</a>      <ul class="nav flex-column ml-3">        <li class="nav-item">          <a class="nav-link" [routerLink]="[\'customer\']">            <button class="btn btn-outline-light">Liste</button>          </a>        </li>        <li class="nav-item">          <a class="nav-link" [routerLink]="[\'customer/add\']">            <button class="btn btn-outline-light">Ajouter</button>          </a>        </li>      </ul>    </li>    <li class="nav-item">      <a class="nav-link" [routerLink]="[\'account\']">Accounts</a>      <ul class="nav flex-column ml-3">        <li class="nav-item">          <a class="nav-link" [routerLink]="[\'account\']">            <button class="btn btn-outline-light">Liste</button>          </a>        </li>        <li class="nav-item">          <a class="nav-link" [routerLink]="[\'account/add\']">            <button class="btn btn-outline-light">Ajouter</button>          </a>        </li>                <li class="nav-item">          <a class="btn btn-outline-danger text-white" (click)="logout()"><i class="bi bi-box-arrow-right"></i> Logout</a>        </li>              </ul>    </li>  </ul></nav></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="p-4" style="width:1350px;">    <div class="card">      <div class="card-body">        <div>          {{currentPath}}        </div>        <h4 class="mt-2">Accounts Statistics</h4>        <div class="statistics">          <div class="statistic">            <span class="label">Total Accounts:</span>            <span class="value">100</span>          </div>          <div class="statistic">            <span class="label">Active Accounts:</span>            <span class="value">80</span>          </div>          <div class="statistic">            <span class="label">Inactive Accounts:</span>            <span class="value">20</span>          </div>        </div>      </div>    </div>  </div>  </div>'
     var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-about-us'},{'name': 'AheaderComponent', 'selector': 'app-aheader'},{'name': 'AIndexComponent', 'selector': 'app-a-accounts'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'PAddComponent', 'selector': 'app-p-add'},{'name': 'PEditComponent', 'selector': 'app-p-edit'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PIndexComponent', 'selector': 'app-p-index'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'SidemenuComponent'};
+    var ACTUAL_COMPONENT = {'name': 'DashboardComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -480,7 +465,7 @@ export class SidemenuComponent implements OnInit{
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'SidemenuComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'DashboardComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

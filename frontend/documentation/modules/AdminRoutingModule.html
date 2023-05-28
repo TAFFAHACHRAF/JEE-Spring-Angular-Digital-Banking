@@ -75,16 +75,16 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
 import { AlayoutComponent } from &#x27;./alayout/alayout.component&#x27;;
-import { DashbordComponent } from &#x27;./dashbord/dashbord.component&#x27;;
-import { ProductModule } from &#x27;./product/product.module&#x27;;
-
+import { DashboardComponent } from &#x27;./dashbord/dashbord.component&#x27;;
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;, component: AlayoutComponent, children : [
       { path : &#x27;&#x27;, redirectTo : &#x27;dashbord&#x27;, pathMatch : &#x27;full&#x27;},
-      { path : &#x27;dashbord&#x27;, component : DashbordComponent},
-      { path : &#x27;product&#x27;, loadChildren: () &#x3D;&gt; &quot;import(\&quot;./product/product.module\&quot;).\
-        then(m &#x3D;&gt; m.ProductModule)&quot;}
+      { path : &#x27;dashbord&#x27;, component : DashboardComponent},
+      { path : &#x27;customer&#x27;, loadChildren: () &#x3D;&gt; &quot;import(\&quot;./customer/customer.module\&quot;).\
+        then(m &#x3D;&gt; m.CustomerModule)&quot;},
+      { path : &#x27;account&#x27;, loadChildren: () &#x3D;&gt; &quot;import(\&quot;./account/account.module\&quot;).\
+      then(m &#x3D;&gt; m.AccountModule)&quot;}
     ]
   }
 ];

@@ -141,15 +141,48 @@ export class HomeComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;home works!&lt;/p&gt;
-</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container bg-white&quot;&gt;
+    &lt;h1 class&#x3D;&quot;heading&quot;&gt;Welcome to TAFFAH BANK&lt;/h1&gt;
+    &lt;p class&#x3D;&quot;description&quot;&gt;We provide a comprehensive banking solution to manage your bank accounts. Each account belongs to a customer and can undergo debit and credit operations. We offer two types of accounts: Current Accounts and Savings Accounts.&lt;/p&gt;
+    &lt;div class&#x3D;&quot;video-wrapper&quot;&gt;
+        &lt;iframe src&#x3D;&quot;https://www.youtube.com/embed/VIDEO_ID&quot; frameborder&#x3D;&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Watch our 5-minute demo video to learn more about our Bank Account Management Application.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
                     <code>./home.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">.container {
+    max-width: 800px;
+    margin: 10% auto;
+    padding: 40px;
+}
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.description {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -177,8 +210,8 @@ export class HomeComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>home works!</p></div>'
-    var COMPONENTS = [{'name': 'AheaderComponent', 'selector': 'app-aheader'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashbordComponent', 'selector': 'app-dashbord'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'PAddComponent', 'selector': 'app-p-add'},{'name': 'PDeleteComponent', 'selector': 'app-p-delete'},{'name': 'PEditComponent', 'selector': 'app-p-edit'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PIndexComponent', 'selector': 'app-p-index'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'}];
+        var COMPONENT_TEMPLATE = '<div><div class="container bg-white">    <h1 class="heading">Welcome to TAFFAH BANK</h1>    <p class="description">We provide a comprehensive banking solution to manage your bank accounts. Each account belongs to a customer and can undergo debit and credit operations. We offer two types of accounts: Current Accounts and Savings Accounts.</p>    <div class="video-wrapper">        <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>    </div>    <p>Watch our 5-minute demo video to learn more about our Bank Account Management Application.</p></div></div>'
+    var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-about-us'},{'name': 'AheaderComponent', 'selector': 'app-aheader'},{'name': 'AIndexComponent', 'selector': 'app-a-accounts'},{'name': 'AlayoutComponent', 'selector': 'app-alayout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'ErrorComponent', 'selector': 'app-error'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LogoutComponent', 'selector': 'app-logout'},{'name': 'PAddComponent', 'selector': 'app-p-add'},{'name': 'PEditComponent', 'selector': 'app-p-edit'},{'name': 'PheaderComponent', 'selector': 'app-pheader'},{'name': 'PIndexComponent', 'selector': 'app-p-index'},{'name': 'PlayoutComponent', 'selector': 'app-playout'},{'name': 'SidemenuComponent', 'selector': 'app-sidemenu'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>

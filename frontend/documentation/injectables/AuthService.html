@@ -118,7 +118,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/_services/auth.service.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/_services/auth.service.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -181,8 +181,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/app/_services/auth.service.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/_services/auth.service.ts:16</a></div>
                 </td>
             </tr>
 
@@ -249,18 +249,12 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&quot;http://localhost:8093/api/auth/signin&quot;</code>
+                        <i>Default value : </i><code>environment.backendHost+&quot;/auth/signin&quot;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/_services/auth.service.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/_services/auth.service.ts:12</a></div>
                         </td>
                     </tr>
 
@@ -278,12 +272,13 @@ import { Injectable } from &#x27;@angular/core&#x27;;
 import { Credentials } from &#x27;../_interfaces/credentials&#x27;;
 import { Token } from &#x27;../_interfaces/token&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
+import { environment } from &#x27;environment/environment&#x27;;
 
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class AuthService {
-  url &#x3D; &quot;http://localhost:8093/api/auth/signin&quot;
+  url &#x3D; environment.backendHost+&quot;/auth/signin&quot;
 
   constructor(private http: HttpClient) { }
 

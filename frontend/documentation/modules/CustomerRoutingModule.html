@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li >PublicRoutingModule</li>
+    <li >CustomerRoutingModule</li>
 </ol>
 
 
@@ -55,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/public/public-routing.module.ts</code>
+            <code>src/app/admin/customer/customer-routing.module.ts</code>
         </p>
 
 
@@ -74,25 +74,21 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
-import { HomeComponent } from &#x27;./home/home.component&#x27;;
-import { PlayoutComponent } from &#x27;./playout/playout.component&#x27;;
-import { AboutUsComponent } from &#x27;./about-us/about-us.component&#x27;;
+import { PIndexComponent } from &#x27;./c-index/p-index.component&#x27;;
+import { PEditComponent } from &#x27;./c-edit/p-edit.component&#x27;;
+import { PAddComponent } from &#x27;./c-add/p-add.component&#x27;;
 
 const routes: Routes &#x3D; [
-  {
-    path: &#x27;&#x27;,component: PlayoutComponent, children : [
-      {path: &quot;&quot;, redirectTo: &quot;home&quot;, pathMatch: &quot;full&quot;},
-      {path : &quot;home&quot;, component: HomeComponent},
-      {path : &quot;about_me&quot;, component: AboutUsComponent}
-    ]
-  }
+  {path : &#x27;&#x27;, component: PIndexComponent},
+  {path : &#x27;edit/:id&#x27;, component: PEditComponent},
+  {path : &#x27;add&#x27;, component: PAddComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PublicRoutingModule { }
+export class CustomerRoutingModule { }
 </code></pre>
     </div>
 </div>
@@ -139,7 +135,7 @@ export class PublicRoutingModule { }
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'PublicRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'CustomerRoutingModule.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
