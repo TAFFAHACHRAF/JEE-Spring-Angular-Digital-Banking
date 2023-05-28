@@ -16,8 +16,8 @@ Ce projet est une application de gestion de comptes bancaires réalisée avec Sp
 Le projet est divisé en deux parties : le backend développé avec Spring Boot et le frontend développé avec Angular.
 
 ## Diagrammes
-- [Diagramme de Classe](./.report/diagrams/class_diagram.jpg)
-- [Diagramme d'Architecture](./.report/diagrams/architecture_diagram.jpg)
+- [Diagramme de Classe](./report/diagrams/class_diagram.jpg)
+- [Diagramme d'Architecture](./report/diagrams/architecture_diagram.jpg)
 
 ## Contributions
 Les contributions sont les bienvenues ! Si vous souhaitez contribuer à ce projet, veuillez consulter le fichier CONTRIBUTING.md pour obtenir des instructions détaillées.
