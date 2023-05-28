@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkexamen=self.webpackChunkexamen||[]).push([[592],{9467:(a,e,n)=>{n.d(e,{N:()=>s});const s={production:!1,backendHost:"http://localhost:8085/api"}}}]);
